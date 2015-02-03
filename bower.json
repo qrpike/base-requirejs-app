@@ -1,7 +1,7 @@
 {
   "name": "basic-require-app",
   "version": "0.0.1",
-  "homepage": "https://github.com/qrpike/basic-require-app",
+  "homepage": "https://github.com/qrpike/base-requirejs-app",
   "authors": [
     "Quinton Pike <qrpike@gmail.com>"
   ],
