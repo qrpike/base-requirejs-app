@@ -1,0 +1,384 @@
+
+
+
+@import "../packages/bootstrap/less/bootstrap.less";
+@import "general.less";
+@import "variables.less";
+
+
+
+
+// PUT STYLES HERE:
+// -------------------------------------
+
+
+
+
+
+
+#mic-access {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	text-align: center;
+	padding-top: 160px;
+	z-index: 11;
+	.arrow-up {
+		float: left;
+		font-size: 50px;
+		font-weight: 300;
+		.bounce;
+	}
+}
+
+
+
+
+
+
+
+
+#tracks {
+	.track {
+		padding: 10px 0;
+		border-bottom: 1px solid #e2e2e2;
+		h3 {
+			margin: 0;
+		}
+		.col-sm-1 {
+			padding-top: 10px;
+		}
+		.deleteTrack {
+			color: #999;
+			cursor: pointer;
+			&:hover {
+				color: red;
+			}
+		}
+	}
+	.newVoiceover {
+		margin: 35px 0;
+	}
+}
+
+
+#drop-box {
+	border: 2px dashed #ccc;
+	text-align: center;
+	padding: 30px;
+	padding-top: 40px;
+	border-radius: 12px;
+	color: #666;
+	h1 {
+		font-size: 38px;
+		color: #666;
+		font-weight: 400;
+	}
+	h2 {
+		margin: 0;
+		font-size: 28px;
+		color: #666;
+		margin-bottom: 15px;
+	}
+	.small {
+		padding: 10px;
+		color: #ccc;
+	}
+	.fileProgress {
+		margin-top: 15px;
+	}
+	&.dropHover {
+		border: 2px dashed green;
+	}
+	.details {
+		float: left;
+		width: 50%;
+	}
+	.right-border {
+			border-right: 1px solid #e2e2e2;
+		}
+}
+
+
+
+#player-bar {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 115px;
+	z-index: 8;
+	background: #fff;
+	border-top: 1px solid #e2e2e2;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+
+.recorder {
+
+	#wavebars {
+		position: fixed;
+		bottom: 100px;
+		z-index: 5;
+		height: 200px;
+		right: 50%;
+	}
+
+	#analyzer {
+
+		background: #222;
+		padding: 50px 0;
+		position: fixed;
+		top: 160px;
+		left: 0;
+		right: 0;
+		bottom: 100px;
+
+		canvas {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -80px;
+			z-index: 3;
+		}
+
+		.marking-line {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 1px;
+			background: @brand-danger;
+			z-index: 4;
+			opacity: .8;
+		}
+
+		.marking-box {
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			margin-left: -80px;
+			width: 160px;
+			color: #fff;
+			background: @brand-danger;
+			border: 1px solid @brand-danger;
+			padding: 10px;
+			text-align: center;
+			z-index: 5;
+			opacity: .8;
+			cursor: pointer;
+			border-radius: 3px;
+			transition-property: all;
+			transition-duration: .5s;
+			display: none;
+		}
+
+		&.recording {
+			.marking-box {
+				display: block;
+				background: #222;
+				border: 1px solid @brand-danger;
+				color: @brand-danger;
+			}
+		}
+
+	}
+
+
+
+	.controls {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 100px;
+		padding: 20px;
+		text-align: center;
+		.start-record {
+			border-radius: 100%;
+			font-size: 26px;
+			background: #e74c3c;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			padding-top: 6px;
+			color: #fff;
+			margin: 0 auto;
+			cursor: pointer;
+			&:hover {
+				background: darken(#e74c3c, 10%);
+			}
+		}
+		.pause-record {
+			font-size: 34px;
+			cursor: pointer;
+		}
+		.stop-record {
+			position: absolute;
+			right: 30px;
+			cursor: pointer;
+		}
+		.start-over {
+			position: absolute;
+			left: 30px;
+			cursor: pointer;
+		}
+	}
+
+}
+
+.flash {
+  -moz-animation: flash 1s ease-out;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation: flash 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation: flash 1s ease-out;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 1; }        
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 1; }        
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 1; }        
+    100% { opacity: 0; }
+}
+
+.bounce {
+  -moz-animation: bounce 1s ease-out;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation: bounce 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation: bounce 1s ease-out;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+    0% { margin-top: 0; }
+    50% { margin-top: -20px; }        
+    100% { margin-top: 0; }
+}
+
+@-moz-keyframes bounce {
+    0% { margin-top: 0; }
+    50% { margin-top: -20px; }        
+    100% { margin-top: 0; }
+}
+
+@-ms-keyframes bounce {
+    0% { margin-top: 0; }
+    50% { margin-top: -20px; }        
+    100% { margin-top: 0; }
+}
+
+
+.index-page {
+
+	.section-heading {
+		font-size: 42px;
+		color: #5a5a5a;
+	}
+
+	.spacer {
+		width: 100%;
+		height: 100px;
+	}
+
+	.section {
+		margin-top: 100px;
+		margin-bottom: 50px;
+	}
+
+	h1 {
+		line-height: 120%;
+		font-weight: 500;
+		color: #333;
+		margin-top: 80px;
+	}
+
+	h3 {
+		line-height: 170%;
+		font-weight: 200;
+		color: #666;
+		margin-top: 0;
+	}
+
+	.btn {
+		margin-top: 30px;
+	}
+
+	.play-marker {
+		padding-left: 48px;
+		margin-bottom: -100px;
+		width: auto;
+		text-align: left;
+	}
+
+}
+
+
+
+
+
+
+
+
+.footer {
+	padding-bottom: 160px;
+	color: #ccc;
+}
+
+
+
+
+
+
+
+// GET CODES SPECIFIC STYLES:
+// -------------------------------------
+#content {
+	background: #f2f2f2;
+	padding-bottom: 100px;
+}
+.getCodes {
+	.copyButton {
+		position: absolute;
+		right: 32px;
+		margin-top: 17px;
+	}
+	pre {
+		padding: 0;
+		margin: 0;
+	}
+	.playerPreview, .embedCode {
+		margin-top: 35px;
+	}
+	h1 {
+		margin-top: 60px;
+	}
+	h4 {
+		color: #666;
+	}
+	.mkPreview {
+		background: #fff;
+		border-radius: 3px;
+		padding: 20px;
+	}
+	.marker {
+		margin-bottom: 25px;
+	}
+}

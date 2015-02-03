@@ -1,0 +1,41 @@
+{
+  "name": "basic-require-app",
+  "version": "0.0.1",
+  "homepage": "https://github.com/qrpike/basic-require-app",
+  "authors": [
+    "Quinton Pike <qrpike@gmail.com>"
+  ],
+  "description": "Basic Requirejs App structure",
+  "main": "app/js/index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/packages",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "requirejs": "~2.1.15",
+    "backbone": "~1.1.2",
+    "json2": "*",
+    "underscore": "~1.7.0",
+    "requirejs-text": "~2.0.12",
+    "moment": "~2.8.4",
+    "less-mixins-bower": "*",
+    "font-awesome": "~4.2.0",
+    "require-css": "~0.1.5",
+    "animate.less": "euskadi31/animate.less#~2.0.1",
+    "jqueryui": "~1.11.1",
+    "svg.js": "~1.0.1",
+    "jquery.ui": "~1.11.2",
+    "prismjs": "*",
+    "highlightjs-amd": "~8.0.1",
+    "dropzone": "~3.12.0",
+    "jquery-form": "~3.46.0",
+    "zeroclipboard": "~2.2.0"
+  }
+}

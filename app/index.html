@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head>
+	
+	<title>Index Page</title>
+	<link rel="stylesheet" href="/style/css/site.css">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head><body class="index-page">
+
+	
+	<div id="header"></div>
+	<div id="body" class="text-center">
+		<h2>Body</h2>
+	</div>
+
+	<!-- Start Application: -->
+	<script src="packages/requirejs/require.js"></script>
+	<script>
+		require(['js/require-config'], function(){
+			require(['index'])
+		});
+	</script>
+
+</body></html>
