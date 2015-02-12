@@ -78,7 +78,8 @@ module.exports = function (grunt) {
 					'<%=config.app%>/**/*.js',
 					'<%=config.app%>/**/*.less',
 					'<%=config.app%>/**/*.html',
-					'<%=config.app%>/**/*.css'
+					'<%=config.app%>/**/*.css',
+					'!<%=config.app%>/packages/**'
 				],
 				options: {
 					nospawn: true,
