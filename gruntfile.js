@@ -72,7 +72,7 @@ module.exports = function (grunt) {
 				livereload: 35728
 			},
 			app: {
-				tasks: ['less:development'],
+				tasks: ['newer:less:development'],
 				files: [
 					'<%=config.app%>/*.html',
 					'<%=config.app%>/**/*.js',
